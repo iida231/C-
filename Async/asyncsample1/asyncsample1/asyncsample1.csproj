@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+<<<<<<< HEAD
+  <ItemGroup>
+    <Compile Update="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Form1 - コピー - コピー %282%29 - コピー.resx">
+      <DependentUpon>Form1 - コピー.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form1 - コピー - コピー %282%29.resx">
+      <DependentUpon>Form1 - コピー.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form1 - コピー - コピー %283%29.resx">
+      <DependentUpon>Form1.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form1 - コピー - コピー - コピー %282%29.resx">
+      <DependentUpon>Form1 - コピー.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form1 - コピー - コピー - コピー - コピー.resx">
+      <DependentUpon>Form1 - コピー - コピー.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form1 - コピー - コピー - コピー.resx">
+      <DependentUpon>Form1 - コピー - コピー.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form1 - コピー - コピー.resx">
+      <DependentUpon>Form1 - コピー.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form1 - コピー.resx">
+      <DependentUpon>Form1.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form2 - コピー.resx">
+      <DependentUpon>Form2.resx</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+=======
+>>>>>>> parent of 073d146 (threadpool実装)
+</Project>

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Form８.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form５.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form４.cs" />
+    <Compile Update="Form３.cs" />
+    <Compile Update="Form２.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Form6 - コピー.resx">
+      <DependentUpon>Form6.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form7 - コピー.resx">
+      <DependentUpon>Form7.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form２ - コピー.resx">
+      <DependentUpon>Form２.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form３ - コピー.resx">
+      <DependentUpon>Form３.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form４ - コピー.resx">
+      <DependentUpon>Form４.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Form５ - コピー.resx">
+      <DependentUpon>Form５.resx</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
