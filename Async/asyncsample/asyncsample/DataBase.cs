@@ -30,7 +30,7 @@ namespace asyncsample
             var result = new List<DTO>();
             for (int i = 0; i < 5; i++)
             {
-              
+
                 if (_iscancel)
                 {
                     return null;

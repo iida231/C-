@@ -21,11 +21,11 @@ namespace asyncsample
         {
             var result = new List<DTO>();
             for (int i = 0; i < 5; i++)
-            {       
+            {
                 token.ThrowIfCancellationRequested();
                 if (_iscancel)
                 {
-                    return null;
+                     return null;
                 }
                 System.Threading.Thread.Sleep(1000);
                 result.Add(new DTO(i.ToString(), "Name" + 1));

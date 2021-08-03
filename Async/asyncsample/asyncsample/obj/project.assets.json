@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yuich\\localrepo\\async\\asyncsample\\asyncsample\\asyncsample.csproj",
+      "projectUniqueName": "C:\\Users\\yuich\\localrepo\\C-\\Async\\asyncsample\\asyncsample\\asyncsample.csproj",
       "projectName": "asyncsample",
-      "projectPath": "C:\\Users\\yuich\\localrepo\\async\\asyncsample\\asyncsample\\asyncsample.csproj",
+      "projectPath": "C:\\Users\\yuich\\localrepo\\C-\\Async\\asyncsample\\asyncsample\\asyncsample.csproj",
       "packagesPath": "C:\\Users\\yuich\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yuich\\localrepo\\async\\asyncsample\\asyncsample\\obj\\",
+      "outputPath": "C:\\Users\\yuich\\localrepo\\C-\\Async\\asyncsample\\asyncsample\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yuich\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -32,6 +32,8 @@ namespace asyncsample1
                 MessageBox.Show("キャンセルされました");
             }
         }
+
+        //TODO 日本語に変換
         /// <summary>
         /// IDと名前のデータ情報を作成する
         /// </summary>
