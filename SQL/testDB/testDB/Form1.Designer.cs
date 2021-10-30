@@ -29,13 +29,49 @@ namespace testDB
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.DataTableReadButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // DataTableReadButton
+            // 
+            this.DataTableReadButton.Location = new System.Drawing.Point(36, 31);
+            this.DataTableReadButton.Name = "DataTableReadButton";
+            this.DataTableReadButton.Size = new System.Drawing.Size(147, 26);
+            this.DataTableReadButton.TabIndex = 0;
+            this.DataTableReadButton.Text = "DataTableRead";
+            this.DataTableReadButton.UseVisualStyleBackColor = true;
+            this.DataTableReadButton.Click += new System.EventHandler(this.DataTableReadButton_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(259, 31);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(476, 308);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataTableReadButton);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button DataTableReadButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
