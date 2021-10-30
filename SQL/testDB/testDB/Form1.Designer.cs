@@ -31,6 +31,12 @@ namespace testDB
         {
             this.DataTableReadButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ReaderReadButton = new System.Windows.Forms.Button();
+            this.ProductIdBox = new System.Windows.Forms.TextBox();
+            this.ProductNameTextBox = new System.Windows.Forms.TextBox();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.InsertCommandButton = new System.Windows.Forms.Button();
+            this.UpdateCommand = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,24 +53,82 @@ namespace testDB
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(259, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(272, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(476, 308);
             this.dataGridView1.TabIndex = 1;
             // 
+            // ReaderReadButton
+            // 
+            this.ReaderReadButton.Location = new System.Drawing.Point(36, 98);
+            this.ReaderReadButton.Name = "ReaderReadButton";
+            this.ReaderReadButton.Size = new System.Drawing.Size(147, 26);
+            this.ReaderReadButton.TabIndex = 2;
+            this.ReaderReadButton.Text = "Reader　read";
+            this.ReaderReadButton.UseVisualStyleBackColor = true;
+            this.ReaderReadButton.Click += new System.EventHandler(this.ReaderReadButton_Click);
+            // 
+            // ProductIdBox
+            // 
+            this.ProductIdBox.Location = new System.Drawing.Point(288, 31);
+            this.ProductIdBox.Name = "ProductIdBox";
+            this.ProductIdBox.Size = new System.Drawing.Size(100, 25);
+            this.ProductIdBox.TabIndex = 3;
+            // 
+            // ProductNameTextBox
+            // 
+            this.ProductNameTextBox.Location = new System.Drawing.Point(404, 31);
+            this.ProductNameTextBox.Name = "ProductNameTextBox";
+            this.ProductNameTextBox.Size = new System.Drawing.Size(100, 25);
+            this.ProductNameTextBox.TabIndex = 4;
+            // 
+            // PriceTextBox
+            // 
+            this.PriceTextBox.Location = new System.Drawing.Point(519, 31);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(100, 25);
+            this.PriceTextBox.TabIndex = 5;
+            // 
+            // InsertCommandButton
+            // 
+            this.InsertCommandButton.Location = new System.Drawing.Point(36, 148);
+            this.InsertCommandButton.Name = "InsertCommandButton";
+            this.InsertCommandButton.Size = new System.Drawing.Size(147, 26);
+            this.InsertCommandButton.TabIndex = 6;
+            this.InsertCommandButton.Text = "InsertCommand";
+            this.InsertCommandButton.UseVisualStyleBackColor = true;
+            this.InsertCommandButton.Click += new System.EventHandler(this.InsertCommandButton_Click);
+            // 
+            // UpdateCommand
+            // 
+            this.UpdateCommand.Location = new System.Drawing.Point(36, 198);
+            this.UpdateCommand.Name = "UpdateCommand";
+            this.UpdateCommand.Size = new System.Drawing.Size(147, 26);
+            this.UpdateCommand.TabIndex = 7;
+            this.UpdateCommand.Text = "UpdateCommand";
+            this.UpdateCommand.UseVisualStyleBackColor = true;
+            this.UpdateCommand.Click += new System.EventHandler(this.UpdateCommand_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.UpdateCommand);
+            this.Controls.Add(this.InsertCommandButton);
+            this.Controls.Add(this.PriceTextBox);
+            this.Controls.Add(this.ProductNameTextBox);
+            this.Controls.Add(this.ProductIdBox);
+            this.Controls.Add(this.ReaderReadButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.DataTableReadButton);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -72,6 +136,12 @@ namespace testDB
 
         private System.Windows.Forms.Button DataTableReadButton;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button ReaderReadButton;
+        private System.Windows.Forms.TextBox ProductIdBox;
+        private System.Windows.Forms.TextBox ProductNameTextBox;
+        private System.Windows.Forms.TextBox PriceTextBox;
+        private System.Windows.Forms.Button InsertCommandButton;
+        private System.Windows.Forms.Button UpdateCommand;
     }
 }
 
