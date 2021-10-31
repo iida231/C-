@@ -41,6 +41,7 @@ namespace testDB
             this.DapperReadButton = new System.Windows.Forms.Button();
             this.DapperInsertButton = new System.Windows.Forms.Button();
             this.EFreadButton = new System.Windows.Forms.Button();
+            this.EFInsertButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,11 +156,22 @@ namespace testDB
             this.EFreadButton.UseVisualStyleBackColor = true;
             this.EFreadButton.Click += new System.EventHandler(this.EFreadButton_Click);
             // 
+            // EFInsertButton
+            // 
+            this.EFInsertButton.Location = new System.Drawing.Point(210, 148);
+            this.EFInsertButton.Name = "EFInsertButton";
+            this.EFInsertButton.Size = new System.Drawing.Size(147, 26);
+            this.EFInsertButton.TabIndex = 12;
+            this.EFInsertButton.Text = "EF insert";
+            this.EFInsertButton.UseVisualStyleBackColor = true;
+            this.EFInsertButton.Click += new System.EventHandler(this.EFInsertButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 575);
+            this.Controls.Add(this.EFInsertButton);
             this.Controls.Add(this.EFreadButton);
             this.Controls.Add(this.DapperInsertButton);
             this.Controls.Add(this.DapperReadButton);
@@ -194,6 +206,7 @@ namespace testDB
         private System.Windows.Forms.Button DapperReadButton;
         private System.Windows.Forms.Button DapperInsertButton;
         private System.Windows.Forms.Button EFreadButton;
+        private System.Windows.Forms.Button EFInsertButton;
     }
 }
 

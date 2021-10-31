@@ -86,5 +86,19 @@ namespace testDB
 
             dataGridView1.DataSource = source;
         }
+
+        private void EFInsertButton_Click(object sender, EventArgs e)
+        {
+            Product p = new Product();
+            p.ProductId = Convert.ToInt32(ProductIdBox.Text);
+            p.ProductName= ProductNameTextBox.Text;
+            p.Price = Convert.ToInt32(PriceTextBox.Text);
+
+            using (var db = new testDBContext())
+            {
+                db.Products.Add(p);
+                db.SaveChanges();
+            }
+        }
     }
 }
