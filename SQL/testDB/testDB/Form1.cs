@@ -124,5 +124,18 @@ namespace testDB
                 db.SaveChanges();
             }
         }
+
+        private void create50000_Click(object sender, EventArgs e)
+        {
+            for(int i=10;i<= 5000; i++)
+            {
+                ProductSqlServer.Insert(new ProductEntity(
+                    i,
+                    "product:"+i,
+                    i+10));
+            }
+
+            MessageBox.Show("完了");
+        }
     }
 }

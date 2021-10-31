@@ -44,6 +44,7 @@ namespace testDB
             this.EFInsertButton = new System.Windows.Forms.Button();
             this.EFUpdateButton = new System.Windows.Forms.Button();
             this.EFDelete = new System.Windows.Forms.Button();
+            this.create50000 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,11 +189,22 @@ namespace testDB
             this.EFDelete.UseVisualStyleBackColor = true;
             this.EFDelete.Click += new System.EventHandler(this.EFDelete_Click);
             // 
+            // create50000
+            // 
+            this.create50000.Location = new System.Drawing.Point(210, 300);
+            this.create50000.Name = "create50000";
+            this.create50000.Size = new System.Drawing.Size(147, 26);
+            this.create50000.TabIndex = 15;
+            this.create50000.Text = "create 50000";
+            this.create50000.UseVisualStyleBackColor = true;
+            this.create50000.Click += new System.EventHandler(this.create50000_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 575);
+            this.Controls.Add(this.create50000);
             this.Controls.Add(this.EFDelete);
             this.Controls.Add(this.EFUpdateButton);
             this.Controls.Add(this.EFInsertButton);
@@ -233,6 +245,7 @@ namespace testDB
         private System.Windows.Forms.Button EFInsertButton;
         private System.Windows.Forms.Button EFUpdateButton;
         private System.Windows.Forms.Button EFDelete;
+        private System.Windows.Forms.Button create50000;
     }
 }
 
