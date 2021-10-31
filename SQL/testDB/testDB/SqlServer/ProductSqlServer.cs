@@ -154,5 +154,26 @@ where ProductId = @ProductId
                return connection.Query<ProductEntity>(sql).ToList();
             }
         }
+
+        public static void DapperInsert(ProductEntity product)
+        {
+            //改行するときは@がいる
+            string sql = @"insert into Product
+(ProductId,
+ProductName,
+Price)
+values(@ProductId,@ProductName,@Price)";
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Execute(sql,
+                    new
+                    {
+                        ProductId = product.ProductId,
+                        ProductName = product.ProductName,
+                        Price = product.Price,
+                    });
+            }
+        }
     }
 }

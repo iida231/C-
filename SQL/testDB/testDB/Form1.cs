@@ -64,5 +64,15 @@ namespace testDB
         {
             dataGridView1.DataSource = ProductSqlServer.GetDapper();
         }
+
+        private void DapperInsertButton_Click(object sender, EventArgs e)
+        {
+            int productId = Convert.ToInt32(ProductIdBox.Text);
+            string productName = ProductNameTextBox.Text;
+            int price = Convert.ToInt32(PriceTextBox.Text);
+
+            var entity = new ProductEntity(productId, productName, price);
+            ProductSqlServer.DapperInsert(entity);
+        }
     }
 }
