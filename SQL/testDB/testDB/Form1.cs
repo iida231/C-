@@ -97,6 +97,20 @@ namespace testDB
             using (var db = new testDBContext())
             {
                 db.Products.Add(p);
+                //確定
+                db.SaveChanges();
+            }
+        }
+
+        private void EFUpdateButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new testDBContext())
+            {
+                //検索
+                var p = db.Products.Find(Convert.ToInt32(ProductIdBox.Text));
+                p.ProductName = ProductNameTextBox.Text;
+                p.Price = Convert.ToInt32(PriceTextBox.Text);
+                //変更確定
                 db.SaveChanges();
             }
         }
