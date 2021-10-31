@@ -40,6 +40,7 @@ namespace testDB
             this.DeleteCommandButton = new System.Windows.Forms.Button();
             this.DapperReadButton = new System.Windows.Forms.Button();
             this.DapperInsertButton = new System.Windows.Forms.Button();
+            this.EFreadButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@ namespace testDB
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(272, 98);
+            this.dataGridView1.Location = new System.Drawing.Point(488, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 27;
@@ -144,11 +145,22 @@ namespace testDB
             this.DapperInsertButton.UseVisualStyleBackColor = true;
             this.DapperInsertButton.Click += new System.EventHandler(this.DapperInsertButton_Click);
             // 
+            // EFreadButton
+            // 
+            this.EFreadButton.Location = new System.Drawing.Point(210, 98);
+            this.EFreadButton.Name = "EFreadButton";
+            this.EFreadButton.Size = new System.Drawing.Size(147, 26);
+            this.EFreadButton.TabIndex = 11;
+            this.EFreadButton.Text = "EF read";
+            this.EFreadButton.UseVisualStyleBackColor = true;
+            this.EFreadButton.Click += new System.EventHandler(this.EFreadButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1019, 575);
+            this.Controls.Add(this.EFreadButton);
             this.Controls.Add(this.DapperInsertButton);
             this.Controls.Add(this.DapperReadButton);
             this.Controls.Add(this.DeleteCommandButton);
@@ -181,6 +193,7 @@ namespace testDB
         private System.Windows.Forms.Button DeleteCommandButton;
         private System.Windows.Forms.Button DapperReadButton;
         private System.Windows.Forms.Button DapperInsertButton;
+        private System.Windows.Forms.Button EFreadButton;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using testDB.Models;
 using testDB.SqlServer;
 
 namespace testDB
@@ -73,6 +74,17 @@ namespace testDB
 
             var entity = new ProductEntity(productId, productName, price);
             ProductSqlServer.DapperInsert(entity);
+        }
+
+        private void EFreadButton_Click(object sender, EventArgs e)
+        {
+            var source = new List<Product>();
+            using (var db = new testDBContext())
+            {
+                source.AddRange(db.Products);
+            }
+
+            dataGridView1.DataSource = source;
         }
     }
 }
