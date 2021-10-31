@@ -59,5 +59,10 @@ namespace testDB
 
             ProductSqlServer.Delete(productId);
         }
+
+        private void DapperReadButton_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ProductSqlServer.GetDapper();
+        }
     }
 }

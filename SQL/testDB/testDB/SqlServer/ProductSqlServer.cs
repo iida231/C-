@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -140,6 +141,17 @@ where ProductId = @ProductId
                 command.Parameters.AddWithValue("@ProductId", productId);
  
                 var updateCount = command.ExecuteNonQuery();
+            }
+        }
+
+        //Nugetのdapperの使い方
+        public static List<ProductEntity> GetDapper()
+        {
+            var sql = @"select * from Product";
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+               return connection.Query<ProductEntity>(sql).ToList();
             }
         }
     }
