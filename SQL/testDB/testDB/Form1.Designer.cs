@@ -37,6 +37,7 @@ namespace testDB
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.InsertCommandButton = new System.Windows.Forms.Button();
             this.UpdateCommand = new System.Windows.Forms.Button();
+            this.DeleteCommandButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,11 +112,22 @@ namespace testDB
             this.UpdateCommand.UseVisualStyleBackColor = true;
             this.UpdateCommand.Click += new System.EventHandler(this.UpdateCommand_Click);
             // 
+            // DeleteCommandButton
+            // 
+            this.DeleteCommandButton.Location = new System.Drawing.Point(36, 244);
+            this.DeleteCommandButton.Name = "DeleteCommandButton";
+            this.DeleteCommandButton.Size = new System.Drawing.Size(147, 26);
+            this.DeleteCommandButton.TabIndex = 8;
+            this.DeleteCommandButton.Text = "DeleteCommand";
+            this.DeleteCommandButton.UseVisualStyleBackColor = true;
+            this.DeleteCommandButton.Click += new System.EventHandler(this.DeleteCommandButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DeleteCommandButton);
             this.Controls.Add(this.UpdateCommand);
             this.Controls.Add(this.InsertCommandButton);
             this.Controls.Add(this.PriceTextBox);
@@ -142,6 +154,7 @@ namespace testDB
         private System.Windows.Forms.TextBox PriceTextBox;
         private System.Windows.Forms.Button InsertCommandButton;
         private System.Windows.Forms.Button UpdateCommand;
+        private System.Windows.Forms.Button DeleteCommandButton;
     }
 }
 

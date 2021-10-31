@@ -52,5 +52,12 @@ namespace testDB
 
             ProductSqlServer.Update(new ProductEntity(productId, productName, price));
         }
+
+        private void DeleteCommandButton_Click(object sender, EventArgs e)
+        {
+            int productId = Convert.ToInt32(ProductIdBox.Text);
+
+            ProductSqlServer.Delete(productId);
+        }
     }
 }

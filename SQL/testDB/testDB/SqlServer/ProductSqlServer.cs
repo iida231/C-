@@ -124,5 +124,23 @@ where ProductId = @ProductId";
                 }
             }
         }
+
+        public static void Delete(int productId)
+        {
+            //改行するときは@がいる
+            string sql = @"
+delete Product
+where ProductId = @ProductId
+";
+
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = new SqlCommand(sql, connection))
+            {
+                connection.Open();
+                command.Parameters.AddWithValue("@ProductId", productId);
+ 
+                var updateCount = command.ExecuteNonQuery();
+            }
+        }
     }
 }
