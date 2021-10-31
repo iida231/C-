@@ -114,5 +114,15 @@ namespace testDB
                 db.SaveChanges();
             }
         }
+
+        private void EFDelete_Click(object sender, EventArgs e)
+        {
+            using (var db = new testDBContext())
+            {
+                var p = db.Products.Find(Convert.ToInt32(ProductIdBox.Text));
+                db.Products.Remove(p);
+                db.SaveChanges();
+            }
+        }
     }
 }

@@ -43,6 +43,7 @@ namespace testDB
             this.EFreadButton = new System.Windows.Forms.Button();
             this.EFInsertButton = new System.Windows.Forms.Button();
             this.EFUpdateButton = new System.Windows.Forms.Button();
+            this.EFDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,11 +178,22 @@ namespace testDB
             this.EFUpdateButton.UseVisualStyleBackColor = true;
             this.EFUpdateButton.Click += new System.EventHandler(this.EFUpdateButton_Click);
             // 
+            // EFDelete
+            // 
+            this.EFDelete.Location = new System.Drawing.Point(210, 244);
+            this.EFDelete.Name = "EFDelete";
+            this.EFDelete.Size = new System.Drawing.Size(147, 26);
+            this.EFDelete.TabIndex = 14;
+            this.EFDelete.Text = "EFDelete";
+            this.EFDelete.UseVisualStyleBackColor = true;
+            this.EFDelete.Click += new System.EventHandler(this.EFDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 575);
+            this.Controls.Add(this.EFDelete);
             this.Controls.Add(this.EFUpdateButton);
             this.Controls.Add(this.EFInsertButton);
             this.Controls.Add(this.EFreadButton);
@@ -220,6 +232,7 @@ namespace testDB
         private System.Windows.Forms.Button EFreadButton;
         private System.Windows.Forms.Button EFInsertButton;
         private System.Windows.Forms.Button EFUpdateButton;
+        private System.Windows.Forms.Button EFDelete;
     }
 }
 
