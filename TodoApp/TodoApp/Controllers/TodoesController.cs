@@ -15,8 +15,22 @@ namespace TodoApp.Controllers
         private TodoesContext db = new TodoesContext();
 
         // GET: Todoes
+        /// <summary>
+        /// startから呼ばれたactionのリザルトを返す
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
+            //VIewを表示するためのクラス
+            // /views/todoes/index.cshtml
+            //アクションメソッドに対応したviewを出力
+            // そのほかにはRedirectToRouteAction指定メソッドに処理を転送
+            // Content Result指定されたテキストを出力
+            // FileContentResult　指定されたファイルを出力
+            // jsonResult 指定されたオブジェクトをjson構造で返す
+            // HttpNotFoundResult 404を返す
+            // HttpStatusCodeResult Httpステータスコードを返す
+            // EmptyResult 何も行わない
             return View(db.Todoes.ToList());
         }
 
@@ -46,7 +60,8 @@ namespace TodoApp.Controllers
         // 詳細については、https://go.microsoft.com/fwlink/?LinkId=317598 を参照してください。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Summary,Detail,Limit,Done")] Todo todo)
+        //過多ポスティング攻撃の対象になるためDoneを削除
+        public ActionResult Create([Bind(Include = "Id,Summary,Detail,Limit")] Todo todo)
         {
             if (ModelState.IsValid)
             {
@@ -105,6 +120,8 @@ namespace TodoApp.Controllers
         }
 
         // POST: Todoes/Delete/5
+        //postとgetで名前を変えている
+        //トークンを確認する
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
