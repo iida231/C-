@@ -16,7 +16,8 @@ namespace TodoApp
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                //最初に設定するページ
+                defaults: new { controller = "Todoes", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
