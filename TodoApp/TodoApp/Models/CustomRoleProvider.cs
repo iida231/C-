@@ -49,7 +49,7 @@ namespace TodoApp.Models
             {
                 return new string[] { "Administrators" };
             }
-            return new[] { "Users" };
+            return new string[] { "Users" };
         }
 
         public override string[] GetUsersInRole(string roleName)

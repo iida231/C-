@@ -12,7 +12,7 @@ namespace TodoApp.Controllers
     [AllowAnonymous]
     public class LoginController : Controller
     {
-        readonly new CustomMembershipProvider membershipProvider = new CustomMembershipProvider();
+        readonly CustomMembershipProvider membershipProvider = new CustomMembershipProvider();
 
         // GET: Login
         public ActionResult Index()
@@ -22,7 +22,7 @@ namespace TodoApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index([Bind(Include = "UseName,Password")] LoginViewModel model)
+        public ActionResult Index([Bind(Include = "UserName,Password")] LoginViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -30,7 +30,7 @@ namespace TodoApp.Controllers
                 {
                     //認証を維持する
                     FormsAuthentication.SetAuthCookie(model.UserName, false);
-                    return RedirectToAction("Index", "Todes");
+                    return RedirectToAction("Index", "Todoes");
                 }
             }
                 ViewBag.Message = "ログインに失敗しました";
