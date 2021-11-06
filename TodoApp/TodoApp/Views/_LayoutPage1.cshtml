@@ -8,6 +8,11 @@
 </head>
 <body>
     <div class="container">
+        @if (Request.IsAuthenticated)
+        {
+            @Html.ActionLink("ログアウト","SignOut",new { Controller = "Login"});
+        }
+    <div class="container">
         @RenderBody()
     </div>
 </body>
