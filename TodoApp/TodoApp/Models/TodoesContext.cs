@@ -15,5 +15,7 @@ namespace TodoApp.Models
         /// Todoと接続する
         /// </summary>
         public DbSet<Todo> Todoes { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
     }
 }

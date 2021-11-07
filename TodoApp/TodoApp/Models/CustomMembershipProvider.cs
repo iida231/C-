@@ -116,14 +116,26 @@ namespace TodoApp.Models
         /// <returns></returns>
         public override bool ValidateUser(string username, string password)
         {
-            if ("administer".Equals(username) && "password".Equals(password))
-            {
-                return true;
-            }
+            //if ("administer".Equals(username) && "password".Equals(password))
+            //{
+            //    return true;
+            //}
 
-            if ("user".Equals(username) && "password".Equals(password))
+            //if ("user".Equals(username) && "password".Equals(password))
+            //{
+            //    return true;
+            //}
+            //return false;
+
+            using (var db = new TodoesContext())
             {
-                return true;
+                var user = db.Users
+                    .Where(u => u.UserName == username && u.Password == password)
+                    .FirstOrDefault();
+                if(user != null)
+                {
+                    return true;
+                }
             }
             return false;
         }
